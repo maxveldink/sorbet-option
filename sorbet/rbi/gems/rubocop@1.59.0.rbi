@@ -5002,7 +5002,7 @@ class RuboCop::Cop::Corrector < ::Parser::Source::TreeRewriter
 
   # Legacy
   #
-  # source://parser/3.3.0.4/lib/parser/source/tree_rewriter.rb#252
+  # source://parser/3.3.0.5/lib/parser/source/tree_rewriter.rb#252
   def rewrite; end
 
   # Swaps sources at the given ranges.
