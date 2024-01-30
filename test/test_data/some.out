@@ -1,0 +1,26 @@
+test/test_data/some.rb:26: Expected `Integer` but found `String("success")` for argument `payload` https://srb.help/7002
+    26 |    Typed::Some[Integer].new("success")
+                                     ^^^^^^^^^
+  Expected `Integer` for argument `payload` of method `Typed::Some#initialize`:
+    ./lib/typed/option.rb:58:
+    58 |    sig { params(payload: Payload).void }
+                         ^^^^^^^
+  Got `String("success")` originating from:
+    test/test_data/some.rb:26:
+    26 |    Typed::Some[Integer].new("success")
+                                     ^^^^^^^^^
+
+test/test_data/some.rb:33: Method `upcase` does not exist on `Integer` component of `T.any(String, Integer)` https://srb.help/7003
+    33 |    some.payload_or(1).upcase
+                               ^^^^^^
+  Got `T.any(String, Integer)` originating from:
+    test/test_data/some.rb:33:
+    33 |    some.payload_or(1).upcase
+            ^^^^^^^^^^^^^^^^^^
+  Did you mean `phase`? Use `-a` to autocorrect
+    test/test_data/some.rb:33: Replace with `phase`
+    33 |    some.payload_or(1).upcase
+                               ^^^^^^
+    https://github.com/sorbet/sorbet/tree/6440c695688b98f9405bc080c119a2468a6b45ea/rbi/core/integer.rbi#L921: Defined here
+     921 |  def phase(); end
+            ^^^^^^^^^^^

@@ -1,0 +1,14 @@
+test/test_data/none.rb:20: Method `upcase` does not exist on `Integer` https://srb.help/7003
+    20 |    none.payload_or(1).upcase
+                               ^^^^^^
+  Got `Integer` originating from:
+    test/test_data/none.rb:20:
+    20 |    none.payload_or(1).upcase
+            ^^^^^^^^^^^^^^^^^^
+  Did you mean `phase`? Use `-a` to autocorrect
+    test/test_data/none.rb:20: Replace with `phase`
+    20 |    none.payload_or(1).upcase
+                               ^^^^^^
+    https://github.com/sorbet/sorbet/tree/6440c695688b98f9405bc080c119a2468a6b45ea/rbi/core/integer.rbi#L921: Defined here
+     921 |  def phase(); end
+            ^^^^^^^^^^^
